@@ -595,11 +595,6 @@ function ServicesPage({ navigate }: { navigate: (page: string) => void }) {
                   <span className="hidden sm:inline">Back to Services</span>
                   <span className="sm:hidden">Back</span>
                 </button>
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-20 text-center">
-                  <h3 className="font-bold text-slate-900 text-lg sm:text-xl truncate">
-                    {services.find(s => s.id === activeService)?.title}
-                  </h3>
-                </div>
               </div>
             </div>
 
