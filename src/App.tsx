@@ -26,7 +26,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from './assets/logo.svg';
+import logo from './assets/logo.png';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -120,41 +120,41 @@ export default function App() {
                 <img src={logo} alt="Patel Legal Services Logo" className="h-24 w-auto bg-white rounded p-2 mr-2 object-contain" />
               </div>
               <p className="text-sm mb-4">
-                Professional Corporation providing affordable and effective legal representation for Landlord and Tenant Board and Small Claims Court matters in Ontario.
+                Legal Services providing affordable and effective legal representation for Landlord and Tenant Board and Small Claims Court matters in Ontario.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                <li><button onClick={() => navigate('home')} className="hover:text-slate-900 transition-colors">Home</button></li>
-                <li><button onClick={() => navigate('about')} className="hover:text-slate-900 transition-colors">About Us</button></li>
-                <li><button onClick={() => navigate('services')} className="hover:text-slate-900 transition-colors">Our Services</button></li>
-                <li><button onClick={() => navigate('contact')} className="hover:text-slate-900 transition-colors">Contact</button></li>
+              <ul className="space-y-2 text-sm text-slate-300">
+                <li><button onClick={() => navigate('home')} className="hover:text-white transition-colors">Home</button></li>
+                <li><button onClick={() => navigate('about')} className="hover:text-white transition-colors">About Us</button></li>
+                <li><button onClick={() => navigate('services')} className="hover:text-white transition-colors">Our Services</button></li>
+                <li><button onClick={() => navigate('contact')} className="hover:text-white transition-colors">Contact</button></li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-bold text-white mb-4">Contact Info</h3>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start">
-                  <Phone className="h-5 w-5 text-slate-900 mr-2 flex-shrink-0" />
-                  <span><a href="tel:+15551234567" className="hover:text-slate-900 transition-colors">(555) 123-4567</a></span>
+              <ul className="space-y-3 text-sm text-slate-300">
+                <li className="flex items-center">
+                  <Phone className="h-5 w-5 text-slate-400 mr-3 flex-shrink-0" />
+                  <span><a href="tel:+15551234567" className="hover:text-white transition-colors">(555) 123-4567</a></span>
+                </li>
+                <li className="flex items-center">
+                  <Mail className="h-5 w-5 text-slate-400 mr-3 flex-shrink-0" />
+                  <span><a href="mailto:info@patellegalservices.ca" className="hover:text-white transition-colors">info@patellegalservices.ca</a></span>
                 </li>
                 <li className="flex items-start">
-                  <Mail className="h-5 w-5 text-slate-900 mr-2 flex-shrink-0" />
-                  <span><a href="mailto:info@patellegalservices.ca" className="hover:text-slate-900 transition-colors">info@patellegalservices.ca</a></span>
-                </li>
-                <li className="flex items-start">
-                  <MapPin className="h-5 w-5 text-slate-900 mr-2 flex-shrink-0" />
+                  <MapPin className="h-5 w-5 text-slate-400 mr-3 flex-shrink-0 mt-0.5" />
                   <span>123 Legal Ave, Suite 400<br/>Toronto, ON M5V 2T6</span>
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-xs text-center text-slate-500">
-            <p className="mb-2">© {new Date().getFullYear()} Patel Legal Services Professional Corporation. All rights reserved.</p>
+            <p className="mb-2">© {new Date().getFullYear()} Patel Legal Services. All rights reserved.</p>
             <p>
               <strong>Disclaimer:</strong> The information provided on this website is for general informational purposes only and does not constitute legal advice. 
-              Visiting this website or contacting Patel Legal Services Professional Corporation does not create a paralegal-client relationship. 
+              Visiting this website or contacting Patel Legal Services does not create a paralegal-client relationship. 
               Please consult with a licensed legal professional for advice specific to your situation.
             </p>
           </div>
@@ -169,15 +169,6 @@ function HomePage({ navigate }: { navigate: (page: string) => void }) {
     <div className="animate-in">
       {/* Hero Section */}
       <section className="relative bg-slate-900 text-white py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=1920" 
-            alt="Courthouse background" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-slate-900/80 mix-blend-multiply"></div>
-        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
@@ -247,23 +238,16 @@ function HomePage({ navigate }: { navigate: (page: string) => void }) {
         </div>
       </section>
 
+
       {/* Services Summary */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Practice Areas</h2>
-              <div className="w-24 h-1 bg-slate-900"></div>
-            </div>
-            <button 
-              onClick={() => navigate('services')}
-              className="mt-6 md:mt-0 text-slate-900 font-semibold hover:text-slate-900 flex items-center"
-            >
-              View All Services <ChevronRight className="h-5 w-5 ml-1" />
-            </button>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Practice Areas</h2>
+            <div className="w-24 h-1 bg-slate-900 mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="h-48 overflow-hidden relative">
                 <img 
@@ -280,15 +264,23 @@ function HomePage({ navigate }: { navigate: (page: string) => void }) {
               </div>
               <div className="p-8 flex-grow flex flex-col">
                 <p className="text-slate-500 mb-6 flex-grow">
-                  Comprehensive representation for both landlords and tenants in residential tenancy disputes. We handle evictions, rent arrears, maintenance issues, and lease terminations.
+                  The Residential Tenancies Act is complex. Our firm provides knowledgeable legal guidance and representation to both landlords and tenants in all matters before the Landlord and Tenant Board.
                 </p>
                 <ul className="space-y-2 mb-8">
                   <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Eviction Applications</li>
-                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Rent Arrears Recovery</li>
-                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Tenant Rights Defense</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Rent Arrears & Non-Payment Disputes</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Tenant Rights Violations</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Maintenance and Repair Disputes</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Wrongful Evictions</li>
                 </ul>
                 <button 
-                  onClick={() => navigate('services')}
+                  onClick={() => {
+                    navigate('services');
+                    setTimeout(() => {
+                      const event = new CustomEvent('open-service', { detail: 'ltb' });
+                      window.dispatchEvent(event);
+                    }, 100);
+                  }}
                   className="w-full py-3 border border-slate-200 rounded-md text-slate-900 font-medium group-hover:bg-slate-900 group-hover:text-white hover:!bg-slate-800 transition-colors"
                 >
                   Learn More
@@ -312,15 +304,63 @@ function HomePage({ navigate }: { navigate: (page: string) => void }) {
               </div>
               <div className="p-8 flex-grow flex flex-col">
                 <p className="text-slate-500 mb-6 flex-grow">
-                  Effective advocacy for civil disputes up to $35,000. We assist with drafting pleadings, settlement conferences, and trial representation for various claims.
+                  Our firm provides legal guidance and representation for matters before the Small Claims Court for claims up to $50,000. Whether you are starting a claim or defending one, we work closely with you to develop a strategy that protects your interests and pursue the best possible outcome.
                 </p>
                 <ul className="space-y-2 mb-8">
-                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Debt Recovery</li>
                   <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Breach of Contract</li>
-                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Property Damage Claims</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Debt Recovery</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Property Damage</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Personal Property</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Consumer Disputes</li>
                 </ul>
                 <button 
-                  onClick={() => navigate('services')}
+                  onClick={() => {
+                    navigate('services');
+                    setTimeout(() => {
+                      const event = new CustomEvent('open-service', { detail: 'small-claims' });
+                      window.dispatchEvent(event);
+                    }, 100);
+                  }}
+                  className="w-full py-3 border border-slate-200 rounded-md text-slate-900 font-medium group-hover:bg-slate-900 group-hover:text-white hover:!bg-slate-800 transition-colors"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <div className="h-48 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1618044733300-9472054094ee?auto=format&fit=crop&q=80&w=800" 
+                  alt="Notary" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white flex items-center">
+                  <ShieldCheck className="mr-3 h-6 w-6 text-slate-900" />
+                  Notary Services
+                </h3>
+              </div>
+              <div className="p-8 flex-grow flex flex-col">
+                <p className="text-slate-500 mb-6 flex-grow">
+                  Our firm provides reliable and efficient notary services to individuals and businesses. As a Notary Public, we are authorized to verify identities, witness signatures, and certify documents to ensure they are legally recognized.
+                </p>
+                <ul className="space-y-2 mb-8">
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Affidavits and Statutory Declarations</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Certify True Copies of Documents</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Consent Letters</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Power of Attorney</li>
+                  <li className="flex items-center text-sm text-slate-900"><CheckCircle2 className="h-4 w-4 text-slate-900 mr-2" /> Real Estate and Financial Documents</li>
+                </ul>
+                <button 
+                  onClick={() => {
+                    navigate('services');
+                    setTimeout(() => {
+                      const event = new CustomEvent('open-service', { detail: 'notary' });
+                      window.dispatchEvent(event);
+                    }, 100);
+                  }}
                   className="w-full py-3 border border-slate-200 rounded-md text-slate-900 font-medium group-hover:bg-slate-900 group-hover:text-white hover:!bg-slate-800 transition-colors"
                 >
                   Learn More
@@ -424,21 +464,9 @@ function AboutPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-900 text-xl mb-3">Licenses</h4>
-                        <p className="font-semibold text-slate-900 text-lg">P1 License</p>
-                        <p className="text-slate-600">Law Society of Ontario</p>
+                        <p className="font-semibold text-slate-900 text-lg">Law Society of Ontario</p>
+                        <p className="text-slate-600">P1 License</p>
                       </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-slate-100 p-3 rounded-full mr-5 flex-shrink-0">
-                      <Scale className="h-6 w-6 text-slate-900" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 text-xl mb-3">Approach</h4>
-                      <p className="text-slate-600 text-lg leading-relaxed">
-                        Sagar believes that everyone deserves clear guidance and strong representation when dealing with legal issues. The goal is to provide practical advice, strategic advocacy, and reliable support throughout every stage of the legal process.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -453,6 +481,17 @@ function AboutPage() {
 
 function ServicesPage({ navigate }: { navigate: (page: string) => void }) {
   const [activeService, setActiveService] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleOpenService = (e: CustomEvent) => {
+      setActiveService(e.detail);
+    };
+
+    window.addEventListener('open-service', handleOpenService as EventListener);
+    return () => {
+      window.removeEventListener('open-service', handleOpenService as EventListener);
+    };
+  }, []);
 
   const services = [
     {
@@ -606,25 +645,7 @@ function ServicesPage({ navigate }: { navigate: (page: string) => void }) {
                       <Building className="h-10 w-10 text-slate-900" />
                     </div>
                     <h1 className="text-4xl font-bold text-slate-900 mb-6">Landlord and Tenant Board</h1>
-                    <p className="text-xl text-slate-600 leading-relaxed">
-                      The Residential Tenancies Act is complex. Our firm provides knowledgeable legal guidance and representation to both landlords and tenants in all matters before the Landlord and Tenant Board.
-                    </p>
                   </header>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                    {[
-                      'Eviction Applications',
-                      'Rent Arrears & Non-Payment Disputes',
-                      'Tenant Rights Violations',
-                      'Maintenance and Repair Disputes',
-                      'Wrongful Evictions'
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <CheckCircle2 className="h-5 w-5 text-slate-900 mr-3 flex-shrink-0" />
-                        <span className="font-bold text-slate-900 text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
 
                   <div className="grid md:grid-cols-2 gap-12">
                     <div className="space-y-8">
@@ -719,25 +740,7 @@ function ServicesPage({ navigate }: { navigate: (page: string) => void }) {
                       <FileText className="h-10 w-10 text-slate-900" />
                     </div>
                     <h1 className="text-4xl font-bold text-slate-900 mb-6">Small Claims Court Matters</h1>
-                    <p className="text-xl text-slate-600 leading-relaxed">
-                      Our firm provides legal guidance and representation for matters before the Small Claims Court for claims up to $50,000. Whether you are starting a claim or defending one, we work closely with you to develop a strategy that protects your interests and pursue the best possible outcome.
-                    </p>
                   </header>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                    {[
-                      'Breach of Contract',
-                      'Debt Recovery',
-                      'Property Damage',
-                      'Personal Property',
-                      'Consumer Disputes'
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <CheckCircle2 className="h-5 w-5 text-slate-900 mr-3 flex-shrink-0" />
-                        <span className="font-bold text-slate-900 text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
 
                   <div className="space-y-12">
                     <div className="grid md:grid-cols-2 gap-12">
@@ -832,25 +835,7 @@ function ServicesPage({ navigate }: { navigate: (page: string) => void }) {
                       <ShieldCheck className="h-10 w-10 text-slate-900" />
                     </div>
                     <h1 className="text-4xl font-bold text-slate-900 mb-6">Notary Services</h1>
-                    <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                      Our firm provides reliable and efficient notary services to individuals and businesses. As a Notary Public, we are authorized to verify identities, witness signatures, and certify documents to ensure they are legally recognized:
-                    </p>
                   </header>
-
-                  <div className="grid sm:grid-cols-2 gap-y-3 gap-x-8">
-                    {[
-                      'Affidavits and Statutory Declarations',
-                      'Certify True Copies of Documents',
-                      'Consent Letters',
-                      'Power of Attorney',
-                      'Real Estate and Financial Documents'
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center text-slate-700">
-                        <CheckCircle2 className="h-5 w-5 text-slate-900 mr-3 flex-shrink-0" />
-                        {item}
-                      </div>
-                    ))}
-                  </div>
 
 
                   <section id="doc-auth" className="bg-slate-50 p-10 rounded-3xl border border-slate-200 scroll-mt-48">
@@ -951,14 +936,13 @@ function ContactPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <div className="bg-slate-100 p-3 rounded-full mr-4">
                     <Mail className="h-6 w-6 text-slate-900" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-slate-900 mb-1">Email</h3>
                     <p className="text-slate-500"><a href="mailto:info@patellegalservices.ca" className="hover:text-slate-900 transition-colors">info@patellegalservices.ca</a></p>
-                    <p className="text-sm text-slate-500 mt-1">We aim to respond within 24 hours.</p>
                   </div>
                 </div>
                 
